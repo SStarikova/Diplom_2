@@ -29,7 +29,7 @@ public class LoginUserTest {
     @Description("Проверка на успешную авторизацию существующего пользователя")
     public void userCanLoginSuccessfullyTest() {
         ValidatableResponse response = userMethods.logIn(user);
-        userChecks.checkUserLoggedIn(response, accessToken);
+        userChecks.checkUserLoggedIn(response);
     }
 
     @Test

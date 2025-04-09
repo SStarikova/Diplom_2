@@ -37,7 +37,7 @@ public class UserChecks {
     }
     // Проверка на успешную авторизацию пользователя
     @Step("Success login")
-    public void checkUserLoggedIn(ValidatableResponse response, String expectedToken) {
+    public void checkUserLoggedIn(ValidatableResponse response) {
         response.assertThat()
                 .statusCode(HttpURLConnection.HTTP_OK)
                 .body("success", equalTo(true))
